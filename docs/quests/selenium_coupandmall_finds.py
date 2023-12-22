@@ -13,8 +13,7 @@ browser.get("https://pages.coupang.com/p/106978")
 pass
 # - html 파일 받음(and 확인)
 html = browser.page_source
-# print(html)
-# - 정보 획득
+
 pass
 from selenium.webdriver.common.by import By
 
