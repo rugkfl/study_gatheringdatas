@@ -50,8 +50,14 @@ for element_item in element_bundle: # list slicing
         delivery = delivery.split() # delivery list화
     
 
-    print("title : {}, old price : {}, new price : {}, delivery : {}".format(title, old_price, new_price, delivery))
-   
+    # print("title : {}, old price : {}, new price : {}, delivery : {}".format(title, old_price, new_price, delivery))
+    print("""
+    title : {}
+    old price : {}
+    new price : {}
+    delivery : {}
+    """.format(title, old_price, new_price, delivery))
+    
 
 pass
 # 브라우저 종료
