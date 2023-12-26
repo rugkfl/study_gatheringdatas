@@ -17,7 +17,7 @@ capabilities = browser.capabilities
 # - 주소입력
 
 # page number
-for page_number in range(1,10) :
+for page_number in range(1,11) :
     url = "https://www.coupang.com/np/campaigns/348?page={}".format(page_number)
     browser.get(url)
     time.sleep(3)
