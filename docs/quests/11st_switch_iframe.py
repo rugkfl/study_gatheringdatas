@@ -71,7 +71,9 @@ content_list = []
 for i in range(len(review_list)) :
     try :
         browser.find_element(by=By.CSS_SELECTOR, value="li.review_list_element  > div > div > div.cont_text_wrap > p.cont_btn.review-expand > button").click()  # 리뷰 내용 클릭(한번만 수행)
-
+    except:
+        pass
+    try:
         element_content = browser.find_elements(by=By.CSS_SELECTOR, value= "div.cont_text_wrap") # 리뷰 내용 찾기
     
         # 현재 리뷰에 대한 내용을 리스트에 추가
@@ -80,7 +82,7 @@ for i in range(len(review_list)) :
     except :
        for x in range(len(review_list)) :
            content_list.append("")
-pass
+    pass
 
 # mongodb 접속하기 위한 function
 def mongo_connect():
@@ -91,6 +93,7 @@ def mongo_connect():
     return collection 
 
 review_comments=mongo_connect()
+review_comments.delete_many({})
 for i in range(len(review_list)):
     review_comments.insert_one({"name":name_list[i], "option":option_list[i], "score":score_list[i], "content":content_list[i]})
     pass
