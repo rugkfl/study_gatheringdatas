@@ -145,7 +145,7 @@ for i in [1,2,4] :
         from pymongo import MongoClient
         mongoClient = MongoClient("mongodb://localhost:27017")     
         database = mongoClient["gatheringdatas"]     
-        collection = database["item_comments"]         
+        collection = database["review_comments"]         
         return collection 
 
     item_comments=mongo_connect()
@@ -162,7 +162,7 @@ for i in [1,2,4] :
         from pymongo import MongoClient
         mongoClient = MongoClient("mongodb://localhost:27017")     
         database = mongoClient["gatheringdatas"]     
-        collection = database["review_comments"]         
+        collection = database["item_comments"]         
         return collection
 
     review_comments=mongo_connect_second()
