@@ -4,9 +4,10 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 
-def function_name():
-    pass
-    return 0 
+# def function_name():
+#     pass
+#     return 0 
+
 # 기능 function : 한 업무에 종속성이 없는것
 def getBrowserFromURI(uri = "https://www.courtauction.go.kr/"):
     webdriver_manager_directory = ChromeDriverManager().install()
